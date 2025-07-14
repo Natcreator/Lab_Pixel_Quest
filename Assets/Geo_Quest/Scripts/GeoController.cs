@@ -16,6 +16,12 @@ public class NewBehaviourScript : MonoBehaviour
     string bear = "how are you";
     // Start is called before the first frame update
     public float speed ;
+    public string nextLevel = "Scene_2";
+    
+       
+    
+
+
     private void OnTriggerEnter2D(Collider2D collision)
     {    Debug.Log(collision.tag);
          switch (collision.tag)
@@ -27,8 +33,14 @@ public class NewBehaviourScript : MonoBehaviour
                     break;
 
                 }
+            case "Finish":
+                {
+                    SceneManager.LoadScene(nextLevel);
+                    break;
 
 
+
+                }
 
         }
 
