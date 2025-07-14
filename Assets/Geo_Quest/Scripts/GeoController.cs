@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class NewBehaviourScript : MonoBehaviour
 {
@@ -14,13 +15,30 @@ public class NewBehaviourScript : MonoBehaviour
 
     string bear = "how are you";
     // Start is called before the first frame update
-    public int speed = 10;
+    public float speed ;
     private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Debug.Log("Hit");
+    {    Debug.Log(collision.tag);
+         switch (collision.tag)
+        {
+            case "Death":
+                {
+                    string thislevel = SceneManager.GetActiveScene().name;
+                    SceneManager.LoadScene(thislevel);
+                    break;
+
+                }
+
+
+
+        }
+
     }
+     
 
 
+
+        
+        
 
     void Start()
     {
@@ -39,8 +57,8 @@ public class NewBehaviourScript : MonoBehaviour
     void Update()
     {
         float xInput = Input.GetAxis("Horizontal");
-        Debug.Log(xInput);
-        rb.velocity=new Vector2(xInput, rb.velocity.y);
+        
+        rb.velocity=new Vector2(xInput*speed, rb.velocity.y);
         
 
         
