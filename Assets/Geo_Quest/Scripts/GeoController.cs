@@ -10,14 +10,14 @@ public class NewBehaviourScript : MonoBehaviour
     int varOne = 1;
 
     private Rigidbody2D rb;
-    
+    private SpriteRenderer sr;
 
 
     string bear = "how are you";
     // Start is called before the first frame update
     public float speed ;
     public string nextLevel = "Scene_2";
-    
+   
        
     
 
@@ -58,11 +58,11 @@ public class NewBehaviourScript : MonoBehaviour
 
         rb = GetComponent<Rigidbody2D>();
 
-        Debug.Log("Hello World");
+       sr = GetComponent<SpriteRenderer>();
 
-        string goat = "im good how about you";
 
-        Debug.Log(bear + goat);
+
+
     }
 
     // Update is called once per frame
@@ -72,47 +72,62 @@ public class NewBehaviourScript : MonoBehaviour
         
         rb.velocity=new Vector2(xInput*speed, rb.velocity.y);
         
+       
 
-        
-
-
-
-
-       /*
-     
-       Debug.Log(varTwo);
-        varTwo++;
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.Alpha1))
 
         {
-            transform.position += new Vector3(0, 1, 0);
+            sr.color = Color.yellow;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+
+        {
+            sr.color = Color.red;
 
         }
-        if (Input.GetKeyDown(KeyCode.S))
+
+        if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            transform.position += new Vector3(0, -1, 0);
-
-        }
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-
-            transform.position += new Vector3(1, 0, 0);
-        }
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            transform.position += new Vector3(-1, 0, 0);
-
-
-
+            sr.color = Color.blue;
         }
 
 
 
+            /*
+
+            Debug.Log(varTwo);
+             varTwo++;
+             if (Input.GetKeyDown(KeyCode.W))
+
+             {
+                 transform.position += new Vector3(0, 1, 0);
+
+             }
+             if (Input.GetKeyDown(KeyCode.S))
+             {
+                 transform.position += new Vector3(0, -1, 0);
+
+             }
+             if (Input.GetKeyDown(KeyCode.D))
+             {
+
+                 transform.position += new Vector3(1, 0, 0);
+             }
+             if (Input.GetKeyDown(KeyCode.A))
+             {
+                 transform.position += new Vector3(-1, 0, 0);
 
 
-        */
 
-    }
+             }
+
+
+
+
+
+             */
+
+        }
     
 
     
