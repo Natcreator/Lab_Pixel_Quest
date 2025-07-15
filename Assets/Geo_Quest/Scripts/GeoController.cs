@@ -17,9 +17,6 @@ public class NewBehaviourScript : MonoBehaviour
     // Start is called before the first frame update
     public float speed ;
     public string nextLevel = "Scene_2";
-   
-       
-    
 
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -45,12 +42,6 @@ public class NewBehaviourScript : MonoBehaviour
         }
 
     }
-     
-
-
-
-        
-        
 
     void Start()
     {

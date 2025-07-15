@@ -5,25 +5,28 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/MenuLevel.unity
-    guid: 2fa55462fc719a848b33dd6097f67562
-  - enabled: 1
-    path: Assets/Pixel_Quest/Scenes/Pixel_Quest_TestLevel.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 0
-    path: Assets/Scenes/Level_2.unity
-    guid: f9555ef8cf6b50447922872cea2af702
   - enabled: 1
     path: Assets/Geo_Quest/Scenes/Scene_1.unity
     guid: 8fcbbf205b9dfa043a98c17f73b8a9f0
   - enabled: 1
     path: Assets/Geo_Quest/Scenes/Scene_2.unity
     guid: e3295328e05bc9e4aa265c529de93ab0
+  - enabled: 0
+    path: Assets/Scenes/MenuLevel.unity
+    guid: 2fa55462fc719a848b33dd6097f67562
+  - enabled: 0
+    path: Assets/Pixel_Quest/Scenes/Pixel_Quest_TestLevel.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 0
+    path: Assets/Scenes/Level_2.unity
+    guid: f9555ef8cf6b50447922872cea2af702
   - enabled: 1
     path: Assets/Geo_Quest/Scenes/Scene_3.unity
     guid: a565dc0a449464c4594c4056b45bec36
   - enabled: 1
     path: Assets/Geo_Quest/Scenes/Scene_4.unity
     guid: 7982cbc81168bbb478e08a6d3d8409b7
+  - enabled: 1
+    path: Assets/Geo_Quest/Scenes/Scene_5.unity
+    guid: 7c62211a224472b4eb579bd9bfa0ccaa
   m_configObjects: {}
