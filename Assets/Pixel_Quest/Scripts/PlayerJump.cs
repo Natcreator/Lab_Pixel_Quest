@@ -70,7 +70,7 @@ public class PlayerJump : MonoBehaviour
 
         }
     
-        if (Input.GetKeyDown(KeyCode.Space) && (_groundCheck || _waterCheck))
+        if (Input.GetKeyDown(KeyCode.Space) && (_groundCheck || waterCheck))
         {
 
             _rigidbody2d.velocity = new Vector2(_rigidbody2d.velocity.x, jumpForce);
