@@ -41,8 +41,8 @@ public class PlayerStats : MonoBehaviour
                 }
             case "Finish":
                 {
-                    string nextLevel = collision.Getcomponent<LevelGoal>().nextLevel;
-                    SceneManager.LoadScene(nectLevel);
+                    string nextlevel = collision.GetComponent<LevelGoal>().nextlevel;
+                    SceneManager.LoadScene(nextlevel);
                     break;
 
 
