@@ -12,6 +12,11 @@ public class PlayerMovement : MonoBehaviour
     public int speed = 4;
     
 
+    
+  
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +42,8 @@ public class PlayerMovement : MonoBehaviour
             sr1.flipX = false;
 
         }
+       
+
 
        
                 

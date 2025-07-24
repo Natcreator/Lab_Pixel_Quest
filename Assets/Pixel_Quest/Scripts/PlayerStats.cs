@@ -11,8 +11,26 @@ public class PlayerStats : MonoBehaviour
     public int CoinCounter = 0;
 
     private int Health = 3;
-
+    private int _maxHealth = 3;
     public Transform RespwanPoint;
+    private playerui _playerui;
+
+
+    private void start()
+
+    {
+        _playerui = GetComponent<playerui>();
+        _playerui.UpdateHealth(Health, _maxHealth);
+
+
+
+    }
+
+
+
+
+
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -23,6 +41,9 @@ public class PlayerStats : MonoBehaviour
             case "Death":
                 {
                     Health--;
+                    _playerui.UpdateHealth(Health, _maxHealth);
+
+
                     if (Health <= 0)
                     {
 
@@ -60,6 +81,7 @@ public class PlayerStats : MonoBehaviour
             case "Health":
                 {
                     Health++;
+                    _playerui.UpdateHealth(Health, _maxHealth);
                     Destroy(collision.gameObject);
                     break;
                 }
