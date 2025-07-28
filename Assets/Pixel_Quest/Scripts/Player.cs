@@ -20,12 +20,12 @@ public class Player : MonoBehaviour
 
         if (_rigidbody2D.velocity.x == 0)
         {
-            _animator.SetBool("isWalking", false);
+            _animator.SetBool("IsWalking", false);
         }
         else
         {
 
-            _animator.SetBool("isWalking", true);
+            _animator.SetBool("IsWalking", true);
         }
 
 

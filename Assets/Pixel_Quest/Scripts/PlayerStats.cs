@@ -14,16 +14,18 @@ public class PlayerStats : MonoBehaviour
     private int _maxHealth = 3;
     public Transform RespwanPoint;
     private playerui _playerui;
+    private int coinsInLevel = 0;
 
 
-    private void start()
+    private void Start()
 
     {
         _playerui = GetComponent<playerui>();
+        _playerui.StartUI();
         _playerui.UpdateHealth(Health, _maxHealth);
-
-
-
+        coinsInLevel  = GameObject.Find("Coins").transform.childCount;
+        _playerui.UpdateText( CoinCounter + "/" + coinsInLevel);
+        
     }
 
 
@@ -73,6 +75,8 @@ public class PlayerStats : MonoBehaviour
 
                 {
                     CoinCounter++;
+                    _playerui.UpdateText(CoinCounter + "/" + coinsInLevel);
+
                     Destroy(collision.gameObject);
                     break;
                 }
